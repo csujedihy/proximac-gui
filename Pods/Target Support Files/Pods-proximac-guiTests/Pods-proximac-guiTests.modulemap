@@ -1,0 +1,6 @@
+framework module Pods_proximac_guiTests {
+  umbrella header "Pods-proximac-guiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

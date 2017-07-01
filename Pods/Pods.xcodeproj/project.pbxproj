@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03ABF5B699297DF14A51294AC7468910 /* Pods-proximac-guiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E1BA10813D47D2E3A1C39CDE0035A88 /* Pods-proximac-guiTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03EB06B8300A5CF8829302776282CE17 /* Pods-proximac-gui-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C663D0CD7238E6F2F37E785379545D0 /* Pods-proximac-gui-dummy.m */; };
+		3C035DF3B5CD3297CDA3E7788FCFB521 /* Pods-proximac-guiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71600C8733A569147DD4B60ED2350774 /* Pods-proximac-guiTests-dummy.m */; };
+		4D3C8FBD6DD02478D9DA8D2FCC288962 /* Pods-proximac-gui-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF899983B29D27C55E0600439862125 /* Pods-proximac-gui-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BF933DF364CECC9093F58C382191B26 /* Pods-proximac-guiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AE589D8D2DD6BE180270594618C087 /* Pods-proximac-guiUITests-dummy.m */; };
+		BC041A86568F54674448129031AAD28F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		E5AD41D4E5A9ADFD9F504B2F44E6DF37 /* Pods-proximac-guiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D50FDFCB33CBD2BC2829F329DDF147A /* Pods-proximac-guiUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EADA0E12C367B56470CC8EACC488465A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		F786C6B2B56B07FC481364F6A4E6ACB1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0256034B11B8C3F7F0A6C77FB8F8A295 /* Pods-proximac-gui-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-proximac-gui-resources.sh"; sourceTree = "<group>"; };
+		0844AC458373B20C9733E35DA6D3B4B7 /* Pods-proximac-guiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-proximac-guiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		09BE5911040D2E6AF5D2F6F567B95D2C /* Pods-proximac-guiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-proximac-guiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1D1F215402BB393F4E2AAD051D6411F3 /* Pods-proximac-guiUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-proximac-guiUITests-frameworks.sh"; sourceTree = "<group>"; };
+		22349BEF7737D84E55B5AA258D32436F /* Pods-proximac-guiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-proximac-guiTests.modulemap"; sourceTree = "<group>"; };
+		2282FD337D92D236C42F345FA4FBE3BD /* Pods-proximac-gui-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-proximac-gui-frameworks.sh"; sourceTree = "<group>"; };
+		259530EE82A820C1CDDBD55E88C2001A /* Pods_proximac_gui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_proximac_gui.framework; path = "Pods-proximac-gui.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2D50FDFCB33CBD2BC2829F329DDF147A /* Pods-proximac-guiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-proximac-guiUITests-umbrella.h"; sourceTree = "<group>"; };
+		2DB212B39AC24866EC3113D21FD9FF6D /* Pods-proximac-guiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-proximac-guiTests.release.xcconfig"; sourceTree = "<group>"; };
+		39E3E4E44709E403297058AC2313234C /* Pods-proximac-guiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-proximac-guiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5E1BA10813D47D2E3A1C39CDE0035A88 /* Pods-proximac-guiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-proximac-guiTests-umbrella.h"; sourceTree = "<group>"; };
+		5E2FC8EF595709119EF4AFE4D4020CD5 /* Pods_proximac_guiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_proximac_guiTests.framework; path = "Pods-proximac-guiTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A256C20EC5C2B85E678D1C54EA0879A /* Pods-proximac-guiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-proximac-guiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DEF5262A18081072EE85E5BCC87865D /* Pods-proximac-guiTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-proximac-guiTests-frameworks.sh"; sourceTree = "<group>"; };
+		71600C8733A569147DD4B60ED2350774 /* Pods-proximac-guiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-proximac-guiTests-dummy.m"; sourceTree = "<group>"; };
+		7415DB5C7EA9ABD418771A92AB384BFF /* Pods_proximac_guiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_proximac_guiUITests.framework; path = "Pods-proximac-guiUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FE1A95CD5C57D6207163F7A8C8B3017 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C10DDD0D87B43FF28C09CA7C0B9678 /* Pods-proximac-guiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-proximac-guiTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		88962C5955F0857549B280190D3EF4B3 /* Pods-proximac-guiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-proximac-guiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A4998EE4C228EBA44CEF55BFCA0BC54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C663D0CD7238E6F2F37E785379545D0 /* Pods-proximac-gui-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-proximac-gui-dummy.m"; sourceTree = "<group>"; };
+		A4645B94CBDA0D5B478023258E5B6801 /* Pods-proximac-gui-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-proximac-gui-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A554B070BF104C2792B37B77E06536C4 /* Pods-proximac-gui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-proximac-gui.debug.xcconfig"; sourceTree = "<group>"; };
+		A7A09DC19613B97242A1CCA0B711BE61 /* Pods-proximac-guiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-proximac-guiUITests.modulemap"; sourceTree = "<group>"; };
+		AC1398CE5D37A5077C0183DD173F5F05 /* Pods-proximac-gui.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-proximac-gui.modulemap"; sourceTree = "<group>"; };
+		BDF899983B29D27C55E0600439862125 /* Pods-proximac-gui-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-proximac-gui-umbrella.h"; sourceTree = "<group>"; };
+		C1A5274B8268B4005026AAFAA47B9F64 /* Pods-proximac-guiTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-proximac-guiTests-resources.sh"; sourceTree = "<group>"; };
+		C5D41EB85C994276BCF851D54CB41AF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01C88D1FB71595C5DE378AB3546A96B /* Pods-proximac-guiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-proximac-guiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1C29A57201D57DCED9DA76FFEB9F265 /* Pods-proximac-guiUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-proximac-guiUITests-resources.sh"; sourceTree = "<group>"; };
+		E8AE589D8D2DD6BE180270594618C087 /* Pods-proximac-guiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-proximac-guiUITests-dummy.m"; sourceTree = "<group>"; };
+		EEEF6979271AA020697603F51D5D3ECF /* Pods-proximac-gui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-proximac-gui.release.xcconfig"; sourceTree = "<group>"; };
+		F147038279C07D98A3F4B7F827CE4CB9 /* Pods-proximac-gui-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-proximac-gui-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05E64ECC3E030CC0E5FE35F81D16DFD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F786C6B2B56B07FC481364F6A4E6ACB1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39FF2B0955C8D79C1F7F9AAA31707F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC041A86568F54674448129031AAD28F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		720D9A26AFA2832D3B4A0D9E28DF0762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADA0E12C367B56470CC8EACC488465A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		37FAE11CE01F8F3EEA18C468F08A7E17 /* Pods-proximac-guiTests */ = {
+			isa = PBXGroup;
+			children = (
+				7FE1A95CD5C57D6207163F7A8C8B3017 /* Info.plist */,
+				22349BEF7737D84E55B5AA258D32436F /* Pods-proximac-guiTests.modulemap */,
+				09BE5911040D2E6AF5D2F6F567B95D2C /* Pods-proximac-guiTests-acknowledgements.markdown */,
+				85C10DDD0D87B43FF28C09CA7C0B9678 /* Pods-proximac-guiTests-acknowledgements.plist */,
+				71600C8733A569147DD4B60ED2350774 /* Pods-proximac-guiTests-dummy.m */,
+				6DEF5262A18081072EE85E5BCC87865D /* Pods-proximac-guiTests-frameworks.sh */,
+				C1A5274B8268B4005026AAFAA47B9F64 /* Pods-proximac-guiTests-resources.sh */,
+				5E1BA10813D47D2E3A1C39CDE0035A88 /* Pods-proximac-guiTests-umbrella.h */,
+				E01C88D1FB71595C5DE378AB3546A96B /* Pods-proximac-guiTests.debug.xcconfig */,
+				2DB212B39AC24866EC3113D21FD9FF6D /* Pods-proximac-guiTests.release.xcconfig */,
+			);
+			name = "Pods-proximac-guiTests";
+			path = "Target Support Files/Pods-proximac-guiTests";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E67D97980D349F0730223E727EB9C5A /* Pods-proximac-guiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C5D41EB85C994276BCF851D54CB41AF2 /* Info.plist */,
+				A7A09DC19613B97242A1CCA0B711BE61 /* Pods-proximac-guiUITests.modulemap */,
+				39E3E4E44709E403297058AC2313234C /* Pods-proximac-guiUITests-acknowledgements.markdown */,
+				88962C5955F0857549B280190D3EF4B3 /* Pods-proximac-guiUITests-acknowledgements.plist */,
+				E8AE589D8D2DD6BE180270594618C087 /* Pods-proximac-guiUITests-dummy.m */,
+				1D1F215402BB393F4E2AAD051D6411F3 /* Pods-proximac-guiUITests-frameworks.sh */,
+				E1C29A57201D57DCED9DA76FFEB9F265 /* Pods-proximac-guiUITests-resources.sh */,
+				2D50FDFCB33CBD2BC2829F329DDF147A /* Pods-proximac-guiUITests-umbrella.h */,
+				6A256C20EC5C2B85E678D1C54EA0879A /* Pods-proximac-guiUITests.debug.xcconfig */,
+				0844AC458373B20C9733E35DA6D3B4B7 /* Pods-proximac-guiUITests.release.xcconfig */,
+			);
+			name = "Pods-proximac-guiUITests";
+			path = "Target Support Files/Pods-proximac-guiUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				DC950CCD665B2688E272C782DA70A582 /* Products */,
+				90220E93ECF8CFB203A77B8349107E78 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		90220E93ECF8CFB203A77B8349107E78 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C522E1B18A0B36FD09BA82B17E4C481A /* Pods-proximac-gui */,
+				37FAE11CE01F8F3EEA18C468F08A7E17 /* Pods-proximac-guiTests */,
+				4E67D97980D349F0730223E727EB9C5A /* Pods-proximac-guiUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C522E1B18A0B36FD09BA82B17E4C481A /* Pods-proximac-gui */ = {
+			isa = PBXGroup;
+			children = (
+				9A4998EE4C228EBA44CEF55BFCA0BC54 /* Info.plist */,
+				AC1398CE5D37A5077C0183DD173F5F05 /* Pods-proximac-gui.modulemap */,
+				A4645B94CBDA0D5B478023258E5B6801 /* Pods-proximac-gui-acknowledgements.markdown */,
+				F147038279C07D98A3F4B7F827CE4CB9 /* Pods-proximac-gui-acknowledgements.plist */,
+				9C663D0CD7238E6F2F37E785379545D0 /* Pods-proximac-gui-dummy.m */,
+				2282FD337D92D236C42F345FA4FBE3BD /* Pods-proximac-gui-frameworks.sh */,
+				0256034B11B8C3F7F0A6C77FB8F8A295 /* Pods-proximac-gui-resources.sh */,
+				BDF899983B29D27C55E0600439862125 /* Pods-proximac-gui-umbrella.h */,
+				A554B070BF104C2792B37B77E06536C4 /* Pods-proximac-gui.debug.xcconfig */,
+				EEEF6979271AA020697603F51D5D3ECF /* Pods-proximac-gui.release.xcconfig */,
+			);
+			name = "Pods-proximac-gui";
+			path = "Target Support Files/Pods-proximac-gui";
+			sourceTree = "<group>";
+		};
+		DC950CCD665B2688E272C782DA70A582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259530EE82A820C1CDDBD55E88C2001A /* Pods_proximac_gui.framework */,
+				5E2FC8EF595709119EF4AFE4D4020CD5 /* Pods_proximac_guiTests.framework */,
+				7415DB5C7EA9ABD418771A92AB384BFF /* Pods_proximac_guiUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AB43B4F5E39058201A085645B9238BB7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D3C8FBD6DD02478D9DA8D2FCC288962 /* Pods-proximac-gui-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8819DC46CD616746A1F3668F8983C00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5AD41D4E5A9ADFD9F504B2F44E6DF37 /* Pods-proximac-guiUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE87587C0CFC6A14BF243C919F30836F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03ABF5B699297DF14A51294AC7468910 /* Pods-proximac-guiTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3292F7FE791A3AEF5C4D7EBD24CF5E9F /* Pods-proximac-guiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B8E52E22DE2DBCA44AAC2D056570A4 /* Build configuration list for PBXNativeTarget "Pods-proximac-guiUITests" */;
+			buildPhases = (
+				3005E1DFFE816CF2816B53D69F896EBE /* Sources */,
+				39FF2B0955C8D79C1F7F9AAA31707F74 /* Frameworks */,
+				C8819DC46CD616746A1F3668F8983C00 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-proximac-guiUITests";
+			productName = "Pods-proximac-guiUITests";
+			productReference = 7415DB5C7EA9ABD418771A92AB384BFF /* Pods_proximac_guiUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		68868193413E325376CFD390CF04D64D /* Pods-proximac-gui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BFBBE9DB729F9F606BBF64654AF4148 /* Build configuration list for PBXNativeTarget "Pods-proximac-gui" */;
+			buildPhases = (
+				85C50E73DBEB3F1F21629CAD14DF2229 /* Sources */,
+				05E64ECC3E030CC0E5FE35F81D16DFD2 /* Frameworks */,
+				AB43B4F5E39058201A085645B9238BB7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-proximac-gui";
+			productName = "Pods-proximac-gui";
+			productReference = 259530EE82A820C1CDDBD55E88C2001A /* Pods_proximac_gui.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75A566FD894DFC6DE85E3D677210B959 /* Pods-proximac-guiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE684BE81B63AC0D9A7635DA703EEA8E /* Build configuration list for PBXNativeTarget "Pods-proximac-guiTests" */;
+			buildPhases = (
+				69DF54657F9B358438E66A9F4DDDBA00 /* Sources */,
+				720D9A26AFA2832D3B4A0D9E28DF0762 /* Frameworks */,
+				CE87587C0CFC6A14BF243C919F30836F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-proximac-guiTests";
+			productName = "Pods-proximac-guiTests";
+			productReference = 5E2FC8EF595709119EF4AFE4D4020CD5 /* Pods_proximac_guiTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DC950CCD665B2688E272C782DA70A582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68868193413E325376CFD390CF04D64D /* Pods-proximac-gui */,
+				75A566FD894DFC6DE85E3D677210B959 /* Pods-proximac-guiTests */,
+				3292F7FE791A3AEF5C4D7EBD24CF5E9F /* Pods-proximac-guiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3005E1DFFE816CF2816B53D69F896EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF933DF364CECC9093F58C382191B26 /* Pods-proximac-guiUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69DF54657F9B358438E66A9F4DDDBA00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C035DF3B5CD3297CDA3E7788FCFB521 /* Pods-proximac-guiTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C50E73DBEB3F1F21629CAD14DF2229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03EB06B8300A5CF8829302776282CE17 /* Pods-proximac-gui-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0C38FCAA26558415D392AABAF8E17A82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01C88D1FB71595C5DE378AB3546A96B /* Pods-proximac-guiTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-proximac-guiTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_proximac_guiTests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		34342BBF37D3A9ED85FF2EB654934920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4DEFE58C7ACC5C449E562EA99212C8C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEEF6979271AA020697603F51D5D3ECF /* Pods-proximac-gui.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-proximac-gui/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-proximac-gui/Pods-proximac-gui.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_proximac_gui;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8831F85376179DDF5F328AFC33B8D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DB212B39AC24866EC3113D21FD9FF6D /* Pods-proximac-guiTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-proximac-guiTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_proximac_guiTests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C085541944987AE88CBF7F5A29E6143F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A256C20EC5C2B85E678D1C54EA0879A /* Pods-proximac-guiUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-proximac-guiUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_proximac_guiUITests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C49A57DBF5E379C05557F87CFC031E80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A554B070BF104C2792B37B77E06536C4 /* Pods-proximac-gui.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-proximac-gui/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-proximac-gui/Pods-proximac-gui.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_proximac_gui;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7509CB1A0725DC3811508244F6B1A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0844AC458373B20C9733E35DA6D3B4B7 /* Pods-proximac-guiUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-proximac-guiUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_proximac_guiUITests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34342BBF37D3A9ED85FF2EB654934920 /* Debug */,
+				F6FC88CB717F413199C282718D2DC09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72B8E52E22DE2DBCA44AAC2D056570A4 /* Build configuration list for PBXNativeTarget "Pods-proximac-guiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C085541944987AE88CBF7F5A29E6143F /* Debug */,
+				D7509CB1A0725DC3811508244F6B1A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BFBBE9DB729F9F606BBF64654AF4148 /* Build configuration list for PBXNativeTarget "Pods-proximac-gui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C49A57DBF5E379C05557F87CFC031E80 /* Debug */,
+				4DEFE58C7ACC5C449E562EA99212C8C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE684BE81B63AC0D9A7635DA703EEA8E /* Build configuration list for PBXNativeTarget "Pods-proximac-guiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C38FCAA26558415D392AABAF8E17A82 /* Debug */,
+				A8831F85376179DDF5F328AFC33B8D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
