@@ -19,6 +19,8 @@
 		C15E8A881F0728FF004C4182 /* RulesMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A871F0728FF004C4182 /* RulesMaker.swift */; };
 		C15E8A8B1F072E5E004C4182 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A8A1F072E5E004C4182 /* Utility.swift */; };
 		C15E8A8E1F07341F004C4182 /* ClickableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A8D1F07341F004C4182 /* ClickableImageView.swift */; };
+		C15E8A921F086A38004C4182 /* ActionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15E8A911F086A38004C4182 /* ActionCellView.xib */; };
+		C15E8A941F086B22004C4182 /* ActionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A931F086B22004C4182 /* ActionCellView.swift */; };
 		C1BF66311F06E1DA008FC960 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF66301F06E1DA008FC960 /* Preferences.swift */; };
 		EE08F660320C44C87F90FC69 /* Pods_proximac_guiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FA54D8380EC645ACF0FA34 /* Pods_proximac_guiTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		C15E8A871F0728FF004C4182 /* RulesMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesMaker.swift; path = VC/RulesMaker.swift; sourceTree = "<group>"; };
 		C15E8A8A1F072E5E004C4182 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
 		C15E8A8D1F07341F004C4182 /* ClickableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClickableImageView.swift; path = View/ClickableImageView.swift; sourceTree = "<group>"; };
+		C15E8A911F086A38004C4182 /* ActionCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionCellView.xib; sourceTree = "<group>"; };
+		C15E8A931F086B22004C4182 /* ActionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionCellView.swift; path = View/ActionCellView.swift; sourceTree = "<group>"; };
 		C1BF66301F06E1DA008FC960 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Model/Preferences.swift; sourceTree = "<group>"; };
 		C610F6FD70AD3AE0C7A41ABC /* Pods-proximac-gui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-gui.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui.release.xcconfig"; sourceTree = "<group>"; };
 		D6FA54D8380EC645ACF0FA34 /* Pods_proximac_guiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_guiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				C15E8A8D1F07341F004C4182 /* ClickableImageView.swift */,
+				C15E8A911F086A38004C4182 /* ActionCellView.xib */,
+				C15E8A931F086B22004C4182 /* ActionCellView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 			files = (
 				C132DC451F05D45700A36BEE /* Assets.xcassets in Resources */,
 				C132DC481F05D45700A36BEE /* Main.storyboard in Resources */,
+				C15E8A921F086A38004C4182 /* ActionCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15E8A941F086B22004C4182 /* ActionCellView.swift in Sources */,
 				C132DC431F05D45700A36BEE /* MainViewController.swift in Sources */,
 				C15E8A831F06FE04004C4182 /* Rule.swift in Sources */,
 				C15E8A8E1F07341F004C4182 /* ClickableImageView.swift in Sources */,

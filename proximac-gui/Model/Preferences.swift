@@ -9,7 +9,7 @@
 import Foundation
 
 class Preferences: NSObject, NSCoding {
-  var rules: Dictionary<String, Rule>?
+  dynamic var rules: Dictionary<String, Rule>?
   var isGlobal: Bool?
   static let sharedInstance = Preferences.read()
   
@@ -35,7 +35,11 @@ class Preferences: NSObject, NSCoding {
       rules?[ruleName] = rule
       sync()
     }
- 
+  }
+  
+  func delete(ruleName: String) {
+    rules?.removeValue(forKey: ruleName)
+    sync()
   }
   
   func sync() {

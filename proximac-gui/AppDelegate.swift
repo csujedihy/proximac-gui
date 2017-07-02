@@ -14,9 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    for app in NSWorkspace.shared().runningApplications {
-      print(app.bundleURL)
-    }
+
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {

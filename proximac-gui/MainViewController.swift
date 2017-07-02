@@ -13,7 +13,7 @@ class MainViewController: NSViewController {
   @IBOutlet weak var listManagementSeg: NSSegmentedControl!
   @IBOutlet weak var tabSeg: NSSegmentedControl!
   @IBOutlet weak var mainTableView: NSTableView!
-  
+  var prefForKVO: Preferences?
   var rulesTable = [Rule]()
   
   override func viewDidLoad() {
@@ -24,13 +24,24 @@ class MainViewController: NSViewController {
     mainTableView.delegate = self
     mainTableView.dataSource = self
     loadRulesFromPreferences()
+    prefForKVO = Preferences.sharedInstance
+    prefForKVO?.addObserver(self, forKeyPath: #keyPath(Preferences.rules), options: .new, context: nil)
     
     // Do any additional setup after loading the view.
+  }
+  
+  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    if let _ = object as? Preferences {
+      loadRulesFromPreferences()
+    } else {
+      super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+    }
   }
   
   func loadRulesFromPreferences() {
     if let rules = Preferences.sharedInstance.rules {
       rulesTable = Array(rules.values)
+      mainTableView.reloadData()
     }
   }
   
@@ -56,12 +67,16 @@ class MainViewController: NSViewController {
       if let rulesMakerVC = storyboard.instantiateController(withIdentifier: "RulesMakerVC") as? NSViewController {
         self.presentViewControllerAsSheet(rulesMakerVC)
       }
-    } else if selectedIndex == 1{
-      
+    } else if selectedIndex == 1 {
+      let row = mainTableView.selectedRow
+      rulesTable[row].destroy()
 
     }
   }
-
+  
+  deinit {
+    prefForKVO?.removeObserver(self, forKeyPath: #keyPath(Preferences.rules))
+  }
 }
 
 
@@ -102,13 +117,29 @@ extension MainViewController: NSTableViewDelegate {
       cellIdentifier = CellIdentifiers.ActionCell
     }
     
+    if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSSegmentedControl {
+      cell.setLabel("On", forSegment: 0)
+      cell.setLabel("Off", forSegment: 1)
+      if rule.isEnabled == true {
+        cell.selectedSegment = 0
+      } else {
+        cell.selectedSegment = 1
+      }
+      return cell
+    }
+    
     if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
-      cell.textField?.stringValue = text ?? ""
+      cell.textField?.stringValue = "  " + (text ?? "")
       cell.imageView?.image = appIcon ?? nil
       return cell
     }
     return nil
   }
+  
+  func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+    return 25
+  }
+
 }
 
 

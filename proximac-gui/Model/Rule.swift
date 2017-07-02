@@ -28,6 +28,12 @@ class Rule: NSObject, NSCoding {
     self.isEnabled = aDecoder.decodeObject(forKey: "isEnabled") as? Bool
   }
   
+  func destroy() {
+    if let ruleName = ruleName {
+      Preferences.sharedInstance.delete(ruleName: ruleName)
+    }
+  }
+  
   init(ruleName: String, appName: String, appPath: String, isEnabled: Bool) {
     self.ruleName = ruleName
     self.appName = appName
