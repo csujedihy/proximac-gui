@@ -28,6 +28,13 @@ class Rule: NSObject, NSCoding {
     self.isEnabled = aDecoder.decodeObject(forKey: "isEnabled") as? Bool
   }
   
+  func toggleRule(_ status: Bool, callback: ((Rule) -> Void)? = nil) {
+    isEnabled = status
+    Preferences.sharedInstance.sync()
+    callback?(self)
+  }
+  
+
   func destroy() {
     if let ruleName = ruleName {
       Preferences.sharedInstance.delete(ruleName: ruleName)

@@ -11,23 +11,56 @@ import Cocoa
 class MainViewController: NSViewController {
 
   @IBOutlet weak var listManagementSeg: NSSegmentedControl!
-  @IBOutlet weak var tabSeg: NSSegmentedControl!
   @IBOutlet weak var mainTableView: NSTableView!
+  @IBOutlet weak var masterToggleLabel: NSButton!
+  @IBOutlet weak var masterToggleView: OGSwitch!
+  @IBOutlet weak var settingsButton: NSButton!
+  
+  lazy var settingsMenu = NSMenu()
   var prefForKVO: Preferences?
   var rulesTable = [Rule]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tabSeg.setLabel("Rules", forSegment: 0)
-    tabSeg.setLabel("Proxies", forSegment: 1)
-    tabSeg.selectedSegment = 0
-    mainTableView.delegate = self
-    mainTableView.dataSource = self
-    loadRulesFromPreferences()
+    setupRulesTableView()
+    setupSettingsMenu()
+    masterToggleView.setOn(isOn: Preferences.sharedInstance.isEnabled ?? false, animated: false)
+    masterToggleView.action = #selector(masterToggleOnClick(_:))
     prefForKVO = Preferences.sharedInstance
     prefForKVO?.addObserver(self, forKeyPath: #keyPath(Preferences.rules), options: .new, context: nil)
     
     // Do any additional setup after loading the view.
+  }
+  
+  func setupSettingsMenu() {
+    settingsButton.action = #selector(settingsButtonOnClick(_:))
+    let settingsItem = NSMenuItem(title: "Preferences", action: #selector(openSettingsOnMenu), keyEquivalent: "c")
+    let quitItem = NSMenuItem(title: "Quit", action: #selector(quitAppOnMenu), keyEquivalent: "q")
+    settingsMenu.addItem(settingsItem)
+    settingsMenu.addItem(quitItem)
+  }
+  
+  func settingsButtonOnClick(_ sender: Any?) {
+    if let button = sender as? NSButton {
+      let p = NSPoint(x: 0, y: button.frame.height)
+      settingsMenu.popUp(positioning: nil, at: p, in: button)
+    }
+  }
+  
+  func quitAppOnMenu(_ sender: Any?) {
+    Preferences.sharedInstance.sync()
+    NSApplication.shared().terminate(self)
+    // shut down proxy and so on
+  }
+  
+  func openSettingsOnMenu(_ sender: Any?) {
+    
+  }
+  
+  func setupRulesTableView() {
+    mainTableView.delegate = self
+    mainTableView.dataSource = self
+    loadRulesFromPreferences()
   }
   
   override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -35,6 +68,14 @@ class MainViewController: NSViewController {
       loadRulesFromPreferences()
     } else {
       super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+    }
+  }
+  
+  func masterToggleOnClick(_ sender: Any?) {
+    print("master toggled")
+    if let masterToggleView = sender as? OGSwitch {
+      print("enter")
+      Preferences.sharedInstance.toggle(masterToggleView.isOn)
     }
   }
   
@@ -74,6 +115,13 @@ class MainViewController: NSViewController {
     }
   }
   
+  func ruleToggleOnClick(_ sender: Any?) {
+    if let switchView = sender as? OGSwitch {
+      let rule = rulesTable[switchView.tableTag]
+      rule.toggleRule(switchView.isOn)
+    }
+  }
+  
   deinit {
     prefForKVO?.removeObserver(self, forKeyPath: #keyPath(Preferences.rules))
   }
@@ -87,59 +135,24 @@ extension MainViewController: NSTableViewDataSource {
 }
 
 extension MainViewController: NSTableViewDelegate {
-  fileprivate enum CellIdentifiers {
-    static let NameCell = "NameCell"
-    static let AppNameCell = "AppNameCell"
-    static let AppPathCell = "AppPathCell"
-    static let ActionCell = "ActionCell"
-  }
-  
   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-    var appIcon: NSImage?
-    var text: String?
-    var cellIdentifier = ""
     let rule = rulesTable[row]
-    
-    if tableColumn == tableView.tableColumns[0] {
-      text = rule.ruleName
-      cellIdentifier = CellIdentifiers.NameCell
-    } else if tableColumn == tableView.tableColumns[1] {
-      text = rule.appName
+    if let cell = tableView.make(withIdentifier: "RuleCard", owner: nil) as? RuleCardCellView {
+      cell.ruleNameLabel.stringValue = "Rule: " + (rule.ruleName ?? "Unknown")
+      cell.appNameLabel.stringValue = "App: " + (rule.appName ?? "Unknown")
+      cell.appPathLabel.stringValue = "Path: " + (rule.appPath ?? "Unkown")
+      cell.switchView.action = #selector(ruleToggleOnClick(_:))
+      cell.switchView.tableTag = row
+      cell.switchView.setOn(isOn: rule.isEnabled ?? false, animated: false)
+
       if let appPath = rule.appPath {
-        appIcon = NSWorkspace.shared().icon(forFile: appPath)
+        cell.appIconImageView.image = NSWorkspace.shared().icon(forFile: appPath)
       }
-      cellIdentifier = CellIdentifiers.AppNameCell
-    } else if tableColumn == tableView.tableColumns[2] {
-      text = rule.appPath
-      cellIdentifier = CellIdentifiers.AppPathCell
-    } else if tableColumn == tableView.tableColumns[3] {
-      text = String(describing: rule.isEnabled)
-      cellIdentifier = CellIdentifiers.ActionCell
-    }
-    
-    if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSSegmentedControl {
-      cell.setLabel("On", forSegment: 0)
-      cell.setLabel("Off", forSegment: 1)
-      if rule.isEnabled == true {
-        cell.selectedSegment = 0
-      } else {
-        cell.selectedSegment = 1
-      }
-      return cell
-    }
-    
-    if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
-      cell.textField?.stringValue = "  " + (text ?? "")
-      cell.imageView?.image = appIcon ?? nil
       return cell
     }
     return nil
   }
   
-  func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-    return 25
-  }
-
 }
 
 

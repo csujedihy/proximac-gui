@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D0E6771197F3850725513A0 /* Pods_proximac_gui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22951C2FB5E038AAEB0B0B0 /* Pods_proximac_gui.framework */; };
-		63A650B714118DCAD01C82F0 /* Pods_proximac_guiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FB963B2F7F9586BBF31BE7 /* Pods_proximac_guiUITests.framework */; };
+		004D5093BFD235AFFE30418A /* Pods_proximac_guiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59996ECC69036AF5D510E2C /* Pods_proximac_guiTests.framework */; };
+		A8A0104AC789A59BD37F8DEA /* Pods_proximac_guiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF8448A3B1104E5AAAEC4E /* Pods_proximac_guiUITests.framework */; };
 		C132DC411F05D45700A36BEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132DC401F05D45700A36BEE /* AppDelegate.swift */; };
 		C132DC431F05D45700A36BEE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132DC421F05D45700A36BEE /* MainViewController.swift */; };
 		C132DC451F05D45700A36BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C132DC441F05D45700A36BEE /* Assets.xcassets */; };
@@ -19,10 +19,12 @@
 		C15E8A881F0728FF004C4182 /* RulesMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A871F0728FF004C4182 /* RulesMaker.swift */; };
 		C15E8A8B1F072E5E004C4182 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A8A1F072E5E004C4182 /* Utility.swift */; };
 		C15E8A8E1F07341F004C4182 /* ClickableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A8D1F07341F004C4182 /* ClickableImageView.swift */; };
-		C15E8A921F086A38004C4182 /* ActionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15E8A911F086A38004C4182 /* ActionCellView.xib */; };
 		C15E8A941F086B22004C4182 /* ActionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E8A931F086B22004C4182 /* ActionCellView.swift */; };
 		C1BF66311F06E1DA008FC960 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF66301F06E1DA008FC960 /* Preferences.swift */; };
-		EE08F660320C44C87F90FC69 /* Pods_proximac_guiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FA54D8380EC645ACF0FA34 /* Pods_proximac_guiTests.framework */; };
+		C1E3410E1F097313007AC804 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3410D1F097313007AC804 /* OGSwitch.swift */; };
+		C1E341471F098201007AC804 /* RuleCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E341461F098201007AC804 /* RuleCardCellView.swift */; };
+		C1F0D1A51F09AF9E0012CB6F /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1A41F09AF9E0012CB6F /* PreferencesViewController.swift */; };
+		D4A82C12D46CD52AE6E0C65B /* Pods_proximac_gui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BA677B89A37092D53A7F69 /* Pods_proximac_gui.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10ECE6B55E952D851CE25124 /* Pods-proximac-guiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests.release.xcconfig"; sourceTree = "<group>"; };
-		58FB963B2F7F9586BBF31BE7 /* Pods_proximac_guiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_guiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		59B190F9C89630617CF4D8C7 /* Pods-proximac-guiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		75DD4AD5C4CD77E86F671283 /* Pods-proximac-guiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B1777BBA79716165449B53C /* Pods-proximac-guiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests.release.xcconfig"; sourceTree = "<group>"; };
-		8DB53026E2860AC084F98096 /* Pods-proximac-gui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-gui.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui.debug.xcconfig"; sourceTree = "<group>"; };
-		A22951C2FB5E038AAEB0B0B0 /* Pods_proximac_gui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_gui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFF8448A3B1104E5AAAEC4E /* Pods_proximac_guiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_guiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20752E2F2973B970A9641942 /* Pods-proximac-guiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		226B1858CCC7951172EA56D4 /* Pods-proximac-gui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-gui.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui.debug.xcconfig"; sourceTree = "<group>"; };
+		40B06211472F3FCD8408F0B8 /* Pods-proximac-guiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		47EDDD33A356ADD31D2502B1 /* Pods-proximac-gui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-gui.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui.release.xcconfig"; sourceTree = "<group>"; };
+		494A55450B4314F2DECB2812 /* Pods-proximac-guiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		580EBB5375225F3B37E4B8D8 /* Pods-proximac-guiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-guiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests.release.xcconfig"; sourceTree = "<group>"; };
+		67BA677B89A37092D53A7F69 /* Pods_proximac_gui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_gui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59996ECC69036AF5D510E2C /* Pods_proximac_guiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_guiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C132DC3D1F05D45700A36BEE /* proximac-gui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proximac-gui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C132DC401F05D45700A36BEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C132DC421F05D45700A36BEE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +70,11 @@
 		C15E8A871F0728FF004C4182 /* RulesMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesMaker.swift; path = VC/RulesMaker.swift; sourceTree = "<group>"; };
 		C15E8A8A1F072E5E004C4182 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
 		C15E8A8D1F07341F004C4182 /* ClickableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClickableImageView.swift; path = View/ClickableImageView.swift; sourceTree = "<group>"; };
-		C15E8A911F086A38004C4182 /* ActionCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionCellView.xib; sourceTree = "<group>"; };
 		C15E8A931F086B22004C4182 /* ActionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionCellView.swift; path = View/ActionCellView.swift; sourceTree = "<group>"; };
 		C1BF66301F06E1DA008FC960 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Model/Preferences.swift; sourceTree = "<group>"; };
-		C610F6FD70AD3AE0C7A41ABC /* Pods-proximac-gui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proximac-gui.release.xcconfig"; path = "Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui.release.xcconfig"; sourceTree = "<group>"; };
-		D6FA54D8380EC645ACF0FA34 /* Pods_proximac_guiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proximac_guiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E3410D1F097313007AC804 /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OGSwitch.swift; path = View/OGSwitch.swift; sourceTree = "<group>"; };
+		C1E341461F098201007AC804 /* RuleCardCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleCardCellView.swift; path = View/RuleCardCellView.swift; sourceTree = "<group>"; };
+		C1F0D1A41F09AF9E0012CB6F /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = VC/PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D0E6771197F3850725513A0 /* Pods_proximac_gui.framework in Frameworks */,
+				D4A82C12D46CD52AE6E0C65B /* Pods_proximac_gui.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE08F660320C44C87F90FC69 /* Pods_proximac_guiTests.framework in Frameworks */,
+				004D5093BFD235AFFE30418A /* Pods_proximac_guiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,34 +98,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63A650B714118DCAD01C82F0 /* Pods_proximac_guiUITests.framework in Frameworks */,
+				A8A0104AC789A59BD37F8DEA /* Pods_proximac_guiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16D9137F3B70E8FDE6F069AE /* Frameworks */ = {
+		8DB7D9C633ACCEBA7A257C00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A22951C2FB5E038AAEB0B0B0 /* Pods_proximac_gui.framework */,
-				D6FA54D8380EC645ACF0FA34 /* Pods_proximac_guiTests.framework */,
-				58FB963B2F7F9586BBF31BE7 /* Pods_proximac_guiUITests.framework */,
+				67BA677B89A37092D53A7F69 /* Pods_proximac_gui.framework */,
+				B59996ECC69036AF5D510E2C /* Pods_proximac_guiTests.framework */,
+				0CFF8448A3B1104E5AAAEC4E /* Pods_proximac_guiUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A975BE4351DEA7890D4243AF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8DB53026E2860AC084F98096 /* Pods-proximac-gui.debug.xcconfig */,
-				C610F6FD70AD3AE0C7A41ABC /* Pods-proximac-gui.release.xcconfig */,
-				59B190F9C89630617CF4D8C7 /* Pods-proximac-guiTests.debug.xcconfig */,
-				8B1777BBA79716165449B53C /* Pods-proximac-guiTests.release.xcconfig */,
-				75DD4AD5C4CD77E86F671283 /* Pods-proximac-guiUITests.debug.xcconfig */,
-				10ECE6B55E952D851CE25124 /* Pods-proximac-guiUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		C132DC341F05D45700A36BEE = {
@@ -131,8 +122,8 @@
 				C132DC511F05D45700A36BEE /* proximac-guiTests */,
 				C132DC5C1F05D45700A36BEE /* proximac-guiUITests */,
 				C132DC3E1F05D45700A36BEE /* Products */,
-				A975BE4351DEA7890D4243AF /* Pods */,
-				16D9137F3B70E8FDE6F069AE /* Frameworks */,
+				FF4DA025E2331222F44925A9 /* Pods */,
+				8DB7D9C633ACCEBA7A257C00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +140,7 @@
 		C132DC3F1F05D45700A36BEE /* proximac-gui */ = {
 			isa = PBXGroup;
 			children = (
+				C1DEAAD41F096C77004B61F8 /* UI */,
 				C15E8A8C1F07340E004C4182 /* View */,
 				C15E8A891F072E33004C4182 /* Utility */,
 				C15E8A841F0712A0004C4182 /* VC */,
@@ -184,6 +176,7 @@
 			children = (
 				C132DC421F05D45700A36BEE /* MainViewController.swift */,
 				C15E8A871F0728FF004C4182 /* RulesMaker.swift */,
+				C1F0D1A41F09AF9E0012CB6F /* PreferencesViewController.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -200,8 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				C15E8A8D1F07341F004C4182 /* ClickableImageView.swift */,
-				C15E8A911F086A38004C4182 /* ActionCellView.xib */,
 				C15E8A931F086B22004C4182 /* ActionCellView.swift */,
+				C1E3410D1F097313007AC804 /* OGSwitch.swift */,
+				C1E341461F098201007AC804 /* RuleCardCellView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -215,6 +209,26 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		C1DEAAD41F096C77004B61F8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FF4DA025E2331222F44925A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				226B1858CCC7951172EA56D4 /* Pods-proximac-gui.debug.xcconfig */,
+				47EDDD33A356ADD31D2502B1 /* Pods-proximac-gui.release.xcconfig */,
+				20752E2F2973B970A9641942 /* Pods-proximac-guiTests.debug.xcconfig */,
+				580EBB5375225F3B37E4B8D8 /* Pods-proximac-guiTests.release.xcconfig */,
+				494A55450B4314F2DECB2812 /* Pods-proximac-guiUITests.debug.xcconfig */,
+				40B06211472F3FCD8408F0B8 /* Pods-proximac-guiUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,12 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C132DC621F05D45700A36BEE /* Build configuration list for PBXNativeTarget "proximac-gui" */;
 			buildPhases = (
-				E78298389B0AC1F16C8AF5E8 /* [CP] Check Pods Manifest.lock */,
+				11CCEA7C8A737AFC18ADB233 /* [CP] Check Pods Manifest.lock */,
 				C132DC391F05D45700A36BEE /* Sources */,
 				C132DC3A1F05D45700A36BEE /* Frameworks */,
 				C132DC3B1F05D45700A36BEE /* Resources */,
-				CA5D487E67B514C60470AB62 /* [CP] Embed Pods Frameworks */,
-				6B745B36FC120A48345AA7F3 /* [CP] Copy Pods Resources */,
+				B13F36E311945940DC7F81D0 /* [CP] Embed Pods Frameworks */,
+				0AE27E0C68B5A7FE37BC3105 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,12 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C132DC651F05D45700A36BEE /* Build configuration list for PBXNativeTarget "proximac-guiTests" */;
 			buildPhases = (
-				886EC9B74B0603AFD944CD8F /* [CP] Check Pods Manifest.lock */,
+				60F1F46D84B51D552CD0B328 /* [CP] Check Pods Manifest.lock */,
 				C132DC4A1F05D45700A36BEE /* Sources */,
 				C132DC4B1F05D45700A36BEE /* Frameworks */,
 				C132DC4C1F05D45700A36BEE /* Resources */,
-				49BDA41E21092D1B58B057D2 /* [CP] Embed Pods Frameworks */,
-				0B4F1B2AA7B8118C576B2DAC /* [CP] Copy Pods Resources */,
+				C0B005618C877A65C7D5E73E /* [CP] Embed Pods Frameworks */,
+				7763647731E8A8C8BB5F82F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,12 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C132DC681F05D45700A36BEE /* Build configuration list for PBXNativeTarget "proximac-guiUITests" */;
 			buildPhases = (
-				9F88A270D01C7EFE3A472B52 /* [CP] Check Pods Manifest.lock */,
+				F56CAF26DD36F009C837C49E /* [CP] Check Pods Manifest.lock */,
 				C132DC551F05D45700A36BEE /* Sources */,
 				C132DC561F05D45700A36BEE /* Frameworks */,
 				C132DC571F05D45700A36BEE /* Resources */,
-				C6BB1C6DD97D48CF41EA3E0F /* [CP] Embed Pods Frameworks */,
-				94090A8663E5337FC79DED1E /* [CP] Copy Pods Resources */,
+				AAA5D84ACB2A25624D0D81DF /* [CP] Embed Pods Frameworks */,
+				597721FB1951D5AAF848BC56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,7 +348,6 @@
 			files = (
 				C132DC451F05D45700A36BEE /* Assets.xcassets in Resources */,
 				C132DC481F05D45700A36BEE /* Main.storyboard in Resources */,
-				C15E8A921F086A38004C4182 /* ActionCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,37 +368,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B4F1B2AA7B8118C576B2DAC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49BDA41E21092D1B58B057D2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B745B36FC120A48345AA7F3 /* [CP] Copy Pods Resources */ = {
+		0AE27E0C68B5A7FE37BC3105 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,7 +383,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		886EC9B74B0603AFD944CD8F /* [CP] Check Pods Manifest.lock */ = {
+		11CCEA7C8A737AFC18ADB233 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,7 +398,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		94090A8663E5337FC79DED1E /* [CP] Copy Pods Resources */ = {
+		597721FB1951D5AAF848BC56 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,7 +413,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F88A270D01C7EFE3A472B52 /* [CP] Check Pods Manifest.lock */ = {
+		60F1F46D84B51D552CD0B328 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,7 +428,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C6BB1C6DD97D48CF41EA3E0F /* [CP] Embed Pods Frameworks */ = {
+		7763647731E8A8C8BB5F82F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAA5D84ACB2A25624D0D81DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,7 +458,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-guiUITests/Pods-proximac-guiUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA5D487E67B514C60470AB62 /* [CP] Embed Pods Frameworks */ = {
+		B13F36E311945940DC7F81D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,7 +473,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-gui/Pods-proximac-gui-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E78298389B0AC1F16C8AF5E8 /* [CP] Check Pods Manifest.lock */ = {
+		C0B005618C877A65C7D5E73E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proximac-guiTests/Pods-proximac-guiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F56CAF26DD36F009C837C49E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -503,8 +516,11 @@
 				C15E8A8E1F07341F004C4182 /* ClickableImageView.swift in Sources */,
 				C15E8A8B1F072E5E004C4182 /* Utility.swift in Sources */,
 				C1BF66311F06E1DA008FC960 /* Preferences.swift in Sources */,
+				C1E341471F098201007AC804 /* RuleCardCellView.swift in Sources */,
 				C15E8A881F0728FF004C4182 /* RulesMaker.swift in Sources */,
+				C1E3410E1F097313007AC804 /* OGSwitch.swift in Sources */,
 				C132DC411F05D45700A36BEE /* AppDelegate.swift in Sources */,
+				C1F0D1A51F09AF9E0012CB6F /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +661,7 @@
 		};
 		C132DC631F05D45700A36BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB53026E2860AC084F98096 /* Pods-proximac-gui.debug.xcconfig */;
+			baseConfigurationReference = 226B1858CCC7951172EA56D4 /* Pods-proximac-gui.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -662,7 +678,7 @@
 		};
 		C132DC641F05D45700A36BEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C610F6FD70AD3AE0C7A41ABC /* Pods-proximac-gui.release.xcconfig */;
+			baseConfigurationReference = 47EDDD33A356ADD31D2502B1 /* Pods-proximac-gui.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -679,7 +695,7 @@
 		};
 		C132DC661F05D45700A36BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59B190F9C89630617CF4D8C7 /* Pods-proximac-guiTests.debug.xcconfig */;
+			baseConfigurationReference = 20752E2F2973B970A9641942 /* Pods-proximac-guiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -695,7 +711,7 @@
 		};
 		C132DC671F05D45700A36BEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B1777BBA79716165449B53C /* Pods-proximac-guiTests.release.xcconfig */;
+			baseConfigurationReference = 580EBB5375225F3B37E4B8D8 /* Pods-proximac-guiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -711,7 +727,7 @@
 		};
 		C132DC691F05D45700A36BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75DD4AD5C4CD77E86F671283 /* Pods-proximac-guiUITests.debug.xcconfig */;
+			baseConfigurationReference = 494A55450B4314F2DECB2812 /* Pods-proximac-guiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -726,7 +742,7 @@
 		};
 		C132DC6A1F05D45700A36BEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10ECE6B55E952D851CE25124 /* Pods-proximac-guiUITests.release.xcconfig */;
+			baseConfigurationReference = 40B06211472F3FCD8408F0B8 /* Pods-proximac-guiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
