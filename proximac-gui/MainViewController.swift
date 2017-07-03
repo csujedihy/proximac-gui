@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import MASPreferences
+
 
 class MainViewController: NSViewController {
 
@@ -16,6 +18,12 @@ class MainViewController: NSViewController {
   @IBOutlet weak var masterToggleView: OGSwitch!
   @IBOutlet weak var settingsButton: NSButton!
   
+  lazy var preferenceWindowController: NSWindowController = {
+    return MASPreferencesWindowController(viewControllers: [
+      PrefGeneralViewController(),
+      PrefNetworkViewController(),
+      ], title: "Preference")
+  }()
   lazy var settingsMenu = NSMenu()
   var prefForKVO: Preferences?
   var rulesTable = [Rule]()
@@ -54,7 +62,7 @@ class MainViewController: NSViewController {
   }
   
   func openSettingsOnMenu(_ sender: Any?) {
-    
+    preferenceWindowController.showWindow(self)
   }
   
   func setupRulesTableView() {

@@ -805,14 +805,6 @@
                                     <action selector="listManagementSegOnClick:" target="XfG-lQ-9wD" id="TWX-3X-7yl"/>
                                 </connections>
                             </segmentedControl>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJl-n9-2zj">
-                                <rect key="frame" x="377" y="459" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSPreferencesGeneral" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2g4-hE-ic6">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2in-5J-f78">
                                 <rect key="frame" x="337" y="14" width="70" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -841,6 +833,14 @@
                                     <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
                             </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJl-n9-2zj">
+                                <rect key="frame" x="387" y="464" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2g4-hE-ic6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DNF-pR-w18" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="AWd-qD-dKC"/>
@@ -864,78 +864,6 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2044" y="826"/>
-        </scene>
-        <!--Preferences View Controller-->
-        <scene sceneID="7Pm-IB-sv1">
-            <objects>
-                <viewController id="4uF-mL-vHv" customClass="PreferencesViewController" customModule="proximac_gui" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ZZi-eG-yka">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <box fixedFrame="YES" title="SOCKS5 Proxy" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-1i-uh4">
-                                <rect key="frame" x="17" y="144" width="416" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" id="bgv-Gc-7YJ">
-                                    <rect key="frame" x="2" y="2" width="412" height="97"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                            </box>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="L6W-iZ-HZr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1271" y="796"/>
-        </scene>
-        <!--Tab View Controller-->
-        <scene sceneID="7sI-be-Fq1">
-            <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="zSb-NY-ggr" sceneMemberID="viewController">
-                    <tabViewItems>
-                        <tabViewItem identifier="" id="kyL-QW-UIf"/>
-                        <tabViewItem identifier="" id="0VT-Do-sQ5"/>
-                    </tabViewItems>
-                    <tabView key="tabView" type="noTabsNoBorder" id="Hog-IE-r1d">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
-                        <tabViewItems/>
-                    </tabView>
-                    <connections>
-                        <segue destination="QxQ-6D-iof" kind="relationship" relationship="tabItems" id="Dsl-IY-hrA"/>
-                        <segue destination="Jw6-E4-rzW" kind="relationship" relationship="tabItems" id="3dy-gE-Q4P"/>
-                    </connections>
-                </tabViewController>
-                <customObject id="iAl-oX-vLO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1438" y="1053"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="DLt-oM-MzT">
-            <objects>
-                <viewController id="QxQ-6D-iof" sceneMemberID="viewController">
-                    <view key="view" id="Xdb-Rb-ouq">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="Hwq-h5-bwA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-768" y="873"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="r1r-3s-ooX">
-            <objects>
-                <viewController id="Jw6-E4-rzW" sceneMemberID="viewController">
-                    <view key="view" id="VWp-AW-oFg">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="6d2-Lg-hhX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-768" y="1234"/>
         </scene>
         <!--Rules Maker-->
         <scene sceneID="Lwc-K5-VWp">
@@ -1085,7 +1013,7 @@ DQ
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>

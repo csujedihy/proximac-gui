@@ -13,7 +13,7 @@ class Preferences: NSObject, NSCoding {
   var isGlobal: Bool?
   var isEnabled: Bool?
   var socks5ServerIP: String?
-  var socks5ServerPort: Int16?
+  var socks5ServerPort: String?
   static let sharedInstance = Preferences.read()
   
   class func read() -> Preferences {
@@ -68,7 +68,7 @@ class Preferences: NSObject, NSCoding {
     self.isGlobal = aDecoder.decodeObject(forKey: "isGlobal") as? Bool
     self.isEnabled = aDecoder.decodeObject(forKey: "isEnabled") as? Bool
     self.socks5ServerIP = aDecoder.decodeObject(forKey: "socks5ServerIP") as? String
-    self.socks5ServerPort = aDecoder.decodeObject(forKey: "socks5ServerPort") as? Int16
+    self.socks5ServerPort = aDecoder.decodeObject(forKey: "socks5ServerPort") as? String
   }
   
   override init() {

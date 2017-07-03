@@ -6,7 +6,7 @@ target 'proximac-gui' do
   use_frameworks!
 
   # Pods for proximac-gui
-
+  pod 'MASPreferences'
   target 'proximac-guiTests' do
     inherit! :search_paths
     # Pods for testing

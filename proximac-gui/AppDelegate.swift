@@ -10,6 +10,7 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+  var eventMonitor: EventMonitor?
   let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
   let popover = NSPopover()
   
@@ -23,17 +24,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     if let vc = storyBoard.instantiateController(withIdentifier: "MainVC") as? MainViewController {
       popover.contentViewController = vc
     }
+    
+    eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
+      if self.popover.isShown {
+        self.closePopover(event)
+      }
+    }
+    eventMonitor?.start()
   }
   
   
   func showPopover(_ sender: AnyObject?) {
     if let button = statusItem.button {
+      eventMonitor?.start()
       popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
     }
   }
   
   func closePopover(_ sender: AnyObject?) {
     popover.performClose(sender)
+    eventMonitor?.stop()
   }
   
   func togglePopover(sender: AnyObject?) {

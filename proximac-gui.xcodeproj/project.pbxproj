@@ -23,7 +23,13 @@
 		C1BF66311F06E1DA008FC960 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF66301F06E1DA008FC960 /* Preferences.swift */; };
 		C1E3410E1F097313007AC804 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3410D1F097313007AC804 /* OGSwitch.swift */; };
 		C1E341471F098201007AC804 /* RuleCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E341461F098201007AC804 /* RuleCardCellView.swift */; };
-		C1F0D1A51F09AF9E0012CB6F /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1A41F09AF9E0012CB6F /* PreferencesViewController.swift */; };
+		C1F0D1B01F09B7820012CB6F /* PrefGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1AE1F09B7820012CB6F /* PrefGeneralViewController.swift */; };
+		C1F0D1B11F09B7820012CB6F /* PrefGeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F0D1AF1F09B7820012CB6F /* PrefGeneralViewController.xib */; };
+		C1F0D1B41F09B7930012CB6F /* PrefNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1B21F09B7930012CB6F /* PrefNetworkViewController.swift */; };
+		C1F0D1B51F09B7930012CB6F /* PrefNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F0D1B31F09B7930012CB6F /* PrefNetworkViewController.xib */; };
+		C1F0D1B81F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1B61F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift */; };
+		C1F0D1B91F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F0D1B71F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib */; };
+		C1F0D1BB1F09D9EF0012CB6F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1BA1F09D9EF0012CB6F /* EventMonitor.swift */; };
 		D4A82C12D46CD52AE6E0C65B /* Pods_proximac_gui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BA677B89A37092D53A7F69 /* Pods_proximac_gui.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +80,13 @@
 		C1BF66301F06E1DA008FC960 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Model/Preferences.swift; sourceTree = "<group>"; };
 		C1E3410D1F097313007AC804 /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OGSwitch.swift; path = View/OGSwitch.swift; sourceTree = "<group>"; };
 		C1E341461F098201007AC804 /* RuleCardCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleCardCellView.swift; path = View/RuleCardCellView.swift; sourceTree = "<group>"; };
-		C1F0D1A41F09AF9E0012CB6F /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = VC/PreferencesViewController.swift; sourceTree = "<group>"; };
+		C1F0D1AE1F09B7820012CB6F /* PrefGeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrefGeneralViewController.swift; path = VC/PrefGeneralViewController.swift; sourceTree = "<group>"; };
+		C1F0D1AF1F09B7820012CB6F /* PrefGeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefGeneralViewController.xib; path = VC/PrefGeneralViewController.xib; sourceTree = "<group>"; };
+		C1F0D1B21F09B7930012CB6F /* PrefNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrefNetworkViewController.swift; path = VC/PrefNetworkViewController.swift; sourceTree = "<group>"; };
+		C1F0D1B31F09B7930012CB6F /* PrefNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefNetworkViewController.xib; path = VC/PrefNetworkViewController.xib; sourceTree = "<group>"; };
+		C1F0D1B61F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrefSubSOCKS5ViewController.swift; path = VC/PrefSubSOCKS5ViewController.swift; sourceTree = "<group>"; };
+		C1F0D1B71F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefSubSOCKS5ViewController.xib; path = VC/PrefSubSOCKS5ViewController.xib; sourceTree = "<group>"; };
+		C1F0D1BA1F09D9EF0012CB6F /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Utility/EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +188,12 @@
 			children = (
 				C132DC421F05D45700A36BEE /* MainViewController.swift */,
 				C15E8A871F0728FF004C4182 /* RulesMaker.swift */,
-				C1F0D1A41F09AF9E0012CB6F /* PreferencesViewController.swift */,
+				C1F0D1AE1F09B7820012CB6F /* PrefGeneralViewController.swift */,
+				C1F0D1AF1F09B7820012CB6F /* PrefGeneralViewController.xib */,
+				C1F0D1B21F09B7930012CB6F /* PrefNetworkViewController.swift */,
+				C1F0D1B31F09B7930012CB6F /* PrefNetworkViewController.xib */,
+				C1F0D1B61F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift */,
+				C1F0D1B71F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -185,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				C15E8A8A1F072E5E004C4182 /* Utility.swift */,
+				C1F0D1BA1F09D9EF0012CB6F /* EventMonitor.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -346,7 +364,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F0D1B51F09B7930012CB6F /* PrefNetworkViewController.xib in Resources */,
+				C1F0D1B11F09B7820012CB6F /* PrefGeneralViewController.xib in Resources */,
 				C132DC451F05D45700A36BEE /* Assets.xcassets in Resources */,
+				C1F0D1B91F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib in Resources */,
 				C132DC481F05D45700A36BEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,13 +535,16 @@
 				C132DC431F05D45700A36BEE /* MainViewController.swift in Sources */,
 				C15E8A831F06FE04004C4182 /* Rule.swift in Sources */,
 				C15E8A8E1F07341F004C4182 /* ClickableImageView.swift in Sources */,
+				C1F0D1B81F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift in Sources */,
+				C1F0D1B41F09B7930012CB6F /* PrefNetworkViewController.swift in Sources */,
+				C1F0D1B01F09B7820012CB6F /* PrefGeneralViewController.swift in Sources */,
 				C15E8A8B1F072E5E004C4182 /* Utility.swift in Sources */,
 				C1BF66311F06E1DA008FC960 /* Preferences.swift in Sources */,
 				C1E341471F098201007AC804 /* RuleCardCellView.swift in Sources */,
 				C15E8A881F0728FF004C4182 /* RulesMaker.swift in Sources */,
+				C1F0D1BB1F09D9EF0012CB6F /* EventMonitor.swift in Sources */,
 				C1E3410E1F097313007AC804 /* OGSwitch.swift in Sources */,
 				C132DC411F05D45700A36BEE /* AppDelegate.swift in Sources */,
-				C1F0D1A51F09AF9E0012CB6F /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

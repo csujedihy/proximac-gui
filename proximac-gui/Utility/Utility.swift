@@ -49,4 +49,32 @@ class Utility {
     alert.runModal()
   }
 
+  static func validatePortNumberString(_ portToValidate: String) -> Bool {
+    if let port = Int(portToValidate) {
+      if port > 0 && port < 65536 {
+        return true
+      }
+    }
+    return false
+  }
+  
+  
+  static func validateIpAddress(_ ipToValidate: String) -> Bool {
+    
+    var sin = sockaddr_in()
+    var sin6 = sockaddr_in6()
+    
+    if ipToValidate.withCString({ cstring in inet_pton(AF_INET6, cstring, &sin6.sin6_addr) }) == 1 {
+      // IPv6 peer.
+      return true
+    }
+    else if ipToValidate.withCString({ cstring in inet_pton(AF_INET, cstring, &sin.sin_addr) }) == 1 {
+      // IPv4 peer.
+      return true
+    }
+    
+    return false;
+  }
+  
 }
+
