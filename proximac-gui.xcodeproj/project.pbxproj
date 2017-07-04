@@ -30,6 +30,8 @@
 		C1F0D1B81F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1B61F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift */; };
 		C1F0D1B91F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F0D1B71F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib */; };
 		C1F0D1BB1F09D9EF0012CB6F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1BA1F09D9EF0012CB6F /* EventMonitor.swift */; };
+		C1F0D1BF1F0AF5A10012CB6F /* SocketsServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1BE1F0AF5A10012CB6F /* SocketsServer.swift */; };
+		C1F0D1C11F0B07810012CB6F /* SocketServerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D1C01F0B07810012CB6F /* SocketServerContext.swift */; };
 		D4A82C12D46CD52AE6E0C65B /* Pods_proximac_gui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BA677B89A37092D53A7F69 /* Pods_proximac_gui.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		C1F0D1B61F09D02D0012CB6F /* PrefSubSOCKS5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrefSubSOCKS5ViewController.swift; path = VC/PrefSubSOCKS5ViewController.swift; sourceTree = "<group>"; };
 		C1F0D1B71F09D02D0012CB6F /* PrefSubSOCKS5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrefSubSOCKS5ViewController.xib; path = VC/PrefSubSOCKS5ViewController.xib; sourceTree = "<group>"; };
 		C1F0D1BA1F09D9EF0012CB6F /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Utility/EventMonitor.swift; sourceTree = "<group>"; };
+		C1F0D1BE1F0AF5A10012CB6F /* SocketsServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketsServer.swift; path = Utility/Socket/SocketsServer.swift; sourceTree = "<group>"; };
+		C1F0D1C01F0B07810012CB6F /* SocketServerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketServerContext.swift; path = Model/SocketServerContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 		C15E8A891F072E33004C4182 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C1F0D1BD1F0AF27D0012CB6F /* Socket */,
 				C15E8A8A1F072E5E004C4182 /* Utility.swift */,
 				C1F0D1BA1F09D9EF0012CB6F /* EventMonitor.swift */,
 			);
@@ -223,6 +228,7 @@
 			children = (
 				C1BF66301F06E1DA008FC960 /* Preferences.swift */,
 				C15E8A821F06FE04004C4182 /* Rule.swift */,
+				C1F0D1C01F0B07810012CB6F /* SocketServerContext.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -232,6 +238,14 @@
 			children = (
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		C1F0D1BD1F0AF27D0012CB6F /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				C1F0D1BE1F0AF5A10012CB6F /* SocketsServer.swift */,
+			);
+			name = Socket;
 			sourceTree = "<group>";
 		};
 		FF4DA025E2331222F44925A9 /* Pods */ = {
@@ -532,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15E8A941F086B22004C4182 /* ActionCellView.swift in Sources */,
+				C1F0D1BF1F0AF5A10012CB6F /* SocketsServer.swift in Sources */,
 				C132DC431F05D45700A36BEE /* MainViewController.swift in Sources */,
 				C15E8A831F06FE04004C4182 /* Rule.swift in Sources */,
 				C15E8A8E1F07341F004C4182 /* ClickableImageView.swift in Sources */,
@@ -539,6 +554,7 @@
 				C1F0D1B41F09B7930012CB6F /* PrefNetworkViewController.swift in Sources */,
 				C1F0D1B01F09B7820012CB6F /* PrefGeneralViewController.swift in Sources */,
 				C15E8A8B1F072E5E004C4182 /* Utility.swift in Sources */,
+				C1F0D1C11F0B07810012CB6F /* SocketServerContext.swift in Sources */,
 				C1BF66311F06E1DA008FC960 /* Preferences.swift in Sources */,
 				C1E341471F098201007AC804 /* RuleCardCellView.swift in Sources */,
 				C15E8A881F0728FF004C4182 /* RulesMaker.swift in Sources */,

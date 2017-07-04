@@ -11,8 +11,10 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   var eventMonitor: EventMonitor?
+  var backendServer: SocketsServer?
   let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
   let popover = NSPopover()
+  
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     if let button = statusItem.button {
@@ -31,6 +33,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       }
     }
     eventMonitor?.start()
+    backendServer = SocketsServer()
+    backendServer?.listenForTrafficFromKernel()
   }
   
   

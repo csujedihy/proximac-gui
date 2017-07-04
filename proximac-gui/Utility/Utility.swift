@@ -50,14 +50,32 @@ class Utility {
   }
 
   static func validatePortNumberString(_ portToValidate: String) -> Bool {
-    if let port = Int(portToValidate) {
-      if port > 0 && port < 65536 {
-        return true
-      }
+    if let port = Int(portToValidate), port > 0 && port < 65536 {
+      return true
     }
     return false
   }
   
+  static func log(_ message: String) {
+    NSLog("%@", message)
+  }
+  
+  static func assert(_ expr: Bool, _ errorMessage: String, _ block: () -> Void = {}) {
+    if !expr {
+      NSLog("%@", errorMessage)
+      showAlert("fatal_error", arguments: [errorMessage])
+      block()
+      exit(1)
+    }
+  }
+  
+  static func fatal(_ message: String, _ block: () -> Void = {}) -> Never {
+    NSLog("%@\n", message)
+    NSLog(Thread.callStackSymbols.joined(separator: "\n"))
+    showAlert("fatal_error", arguments: [message])
+    block()
+    exit(1)
+  }
   
   static func validateIpAddress(_ ipToValidate: String) -> Bool {
     

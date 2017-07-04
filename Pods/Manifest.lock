@@ -1,12 +1,15 @@
 PODS:
+  - CocoaAsyncSocket (7.6.1)
   - MASPreferences (1.1.4)
 
 DEPENDENCIES:
+  - CocoaAsyncSocket
   - MASPreferences
 
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   MASPreferences: 7bdcfe891d7840453cf48f95fa866c3e152ace7a
 
-PODFILE CHECKSUM: 170488cc3c3bb00d85f958f825c7dbda5fd12e85
+PODFILE CHECKSUM: b53431c7d2278d3558f67a784c46514f5cde86d2
 
 COCOAPODS: 1.1.1

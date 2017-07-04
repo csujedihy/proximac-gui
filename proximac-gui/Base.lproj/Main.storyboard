@@ -855,6 +855,7 @@
                     </view>
                     <connections>
                         <outlet property="listManagementSeg" destination="DNF-pR-w18" id="2F2-jx-9Qr"/>
+                        <outlet property="logoButton" destination="2in-5J-f78" id="bA4-KR-t2A"/>
                         <outlet property="mainTableView" destination="UBM-2W-W3H" id="sfs-Y7-Eel"/>
                         <outlet property="masterToggleLabel" destination="hhr-zG-ziW" id="gFh-eH-Xew"/>
                         <outlet property="masterToggleView" destination="Z2l-gJ-0U6" id="Fu4-n5-nRE"/>

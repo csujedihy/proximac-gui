@@ -17,6 +17,7 @@ class MainViewController: NSViewController {
   @IBOutlet weak var masterToggleLabel: NSButton!
   @IBOutlet weak var masterToggleView: OGSwitch!
   @IBOutlet weak var settingsButton: NSButton!
+  @IBOutlet var logoButton: NSButton!
   
   lazy var preferenceWindowController: NSWindowController = {
     return MASPreferencesWindowController(viewControllers: [
@@ -34,8 +35,11 @@ class MainViewController: NSViewController {
     setupSettingsMenu()
     masterToggleView.setOn(isOn: Preferences.sharedInstance.isEnabled ?? false, animated: false)
     masterToggleView.action = #selector(masterToggleOnClick(_:))
+    logoButton.target = self
+    logoButton.action = #selector(logoButtonOnClick(_:))
     prefForKVO = Preferences.sharedInstance
     prefForKVO?.addObserver(self, forKeyPath: #keyPath(Preferences.rules), options: .new, context: nil)
+    
     
     // Do any additional setup after loading the view.
   }
@@ -53,6 +57,10 @@ class MainViewController: NSViewController {
       let p = NSPoint(x: 0, y: button.frame.height)
       settingsMenu.popUp(positioning: nil, at: p, in: button)
     }
+  }
+  
+  func logoButtonOnClick(_ sender: Any?) {
+    NSWorkspace.shared().open(URL(string: "http://proximac.io")!)
   }
   
   func quitAppOnMenu(_ sender: Any?) {

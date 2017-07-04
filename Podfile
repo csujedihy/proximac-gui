@@ -7,6 +7,7 @@ target 'proximac-gui' do
 
   # Pods for proximac-gui
   pod 'MASPreferences'
+  pod 'CocoaAsyncSocket'
   target 'proximac-guiTests' do
     inherit! :search_paths
     # Pods for testing

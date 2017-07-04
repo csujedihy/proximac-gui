@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket/CocoaAsyncSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MASPreferences/MASPreferences.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket/CocoaAsyncSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MASPreferences/MASPreferences.framework"
 fi
