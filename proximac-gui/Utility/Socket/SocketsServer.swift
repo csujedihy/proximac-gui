@@ -25,7 +25,13 @@ class SocketsServer: NSObject {
       }
   
   }
-
+  
+  deinit {
+    if self.listener != nil {
+      listener?.disconnect()
+    }
+  }
+  
 }
 
 extension SocketsServer: GCDAsyncSocketDelegate {
@@ -42,8 +48,7 @@ extension SocketsServer: GCDAsyncSocketDelegate {
   }
   
   func socket(_ sock: GCDAsyncSocket, didAcceptNewSocket newSocket: GCDAsyncSocket) {
-    Utility.log("host: " + (newSocket.connectedHost ?? "Unknown IP"))
-    Utility.log("port: " + String(newSocket.connectedPort))
+    Utility.log("host: " + (newSocket.connectedHost ?? "Unknown IP") + ":" + String(newSocket.connectedPort))
     let serverContext = SocketServerContext(withServerSocket: newSocket)
     serverContext.serverStage = .accepted
     newSocket.userData = serverContext
@@ -57,8 +62,6 @@ extension SocketsServer: GCDAsyncSocketDelegate {
           if serverContext.serverStage == .accepted {
             let handshake = data.withUnsafeBytes { $0.pointee as SocketServerContext.KernelHandshake}
             serverContext.destinationInfo = handshake
-            Utility.log("Version: " + String(handshake.version))
-            Utility.log("Address1: " + String(handshake.address1))
             let remoteSocket = GCDAsyncSocket(delegate: self, delegateQueue: .main)
             remoteSocket.userData = serverContext
             serverContext.remoteSocket = remoteSocket
@@ -68,36 +71,70 @@ extension SocketsServer: GCDAsyncSocketDelegate {
             } catch _ {
               Utility.log("connect failed")
             }
-          } else {
-            
-            
-            
+          } else if serverContext.serverStage == .forwarding {
+            if let remoteSocket = serverContext.remoteSocket {
+              remoteSocket.write(data, withTimeout: -1, tag: SocketTag.withSOCKS5)
+            } else {
+              Utility.log("no remoteSocket found on serverContext")
+            }
+            sock.readData(withTimeout: -1, tag: SocketTag.withKernel)
           }
 
       case SocketTag.withSOCKS5:
-        Utility.log("withSOCKS5 tag")
-        if serverContext.remoteStage == .connected {
+        if serverContext.remoteStage == .forwarding {
+          if let serverSocket = serverContext.serverSocket {
+            serverSocket.write(data, withTimeout: -1, tag: SocketTag.withKernel)
+          } else {
+            Utility.log("no remoteSocket found on serverContext")
+          }
+          sock.readData(withTimeout: -1, tag: SocketTag.withSOCKS5)
+        } else if serverContext.remoteStage == .connected {
           if data[0] == 0x05 && data[1] == 0x00 {
-            Utility.log("Negotiation is OK")
+            Utility.log("Negotiation succeeded")
             serverContext.remoteStage = .negotiated
             if let handshake = serverContext.destinationInfo {
               let packet = SocketsServer.generateSOCKS5Packet(fromKernelHandshake: handshake)
               sock.write(packet, withTimeout: -1, tag: SocketTag.withSOCKS5)
             } else {
-              Utility.log("No destination info found")
+              Utility.log("No destination info is found")
             }
             sock.readData(toLength: FixedPacketLength.fromSOCKS5RequestReply, withTimeout: -1, tag: SocketTag.withSOCKS5)
           }
         } else if serverContext.remoteStage == .negotiated {
           if SocketsServer.validateSOCKS5RequestReply(packet: data) {
-            Utility.log("REP OK")
+            serverContext.remoteStage = .forwarding
+            serverContext.serverStage = .forwarding
+            serverContext.serverSocket?.readData(withTimeout: -1, tag: SocketTag.withKernel)
+            sock.readData(withTimeout: -1, tag: SocketTag.withSOCKS5)
           }
-          
         }
       default:
         Utility.log("unknown tag ERROR")
       }
     }
+  }
+  
+  func socketDidDisconnect(_ sock: GCDAsyncSocket, withError: Error?) {
+    Utility.log("socketDidDisconnect")
+    if let serverContext = sock.userData as? SocketServerContext{
+      if sock == serverContext.serverSocket {
+        Utility.log("kernel side close")
+        Utility.log("sock status = " + String(sock.isDisconnected))
+        serverContext.remoteSocket?.disconnectAfterReadingAndWriting()
+
+      } else if sock == serverContext.remoteSocket {
+        Utility.log("remote side close")
+        Utility.log("sock status = " + String(sock.isDisconnected))
+        serverContext.serverSocket?.disconnectAfterReadingAndWriting()
+      } else {
+        Utility.fatal("sock is not found")
+      }
+    
+    }
+  }
+  
+  func socket(_ sock: GCDAsyncSocket, didWriteDataWithTag: Int) {
+    Utility.log("didWriteDataWithTag = " + String(didWriteDataWithTag))
   }
   
   func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
@@ -114,6 +151,7 @@ extension SocketsServer: GCDAsyncSocketDelegate {
     }
 
   }
+  
 }
 
 extension SocketsServer {
@@ -149,6 +187,7 @@ extension SocketsServer {
   o  X'08' Address type not supported
   o  X'09' to X'FF' unassigned
   */
+  
   class func validateSOCKS5RequestReply(packet: Data) -> Bool {
     let value = packet[1]
     switch value {
